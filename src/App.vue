@@ -28,7 +28,7 @@ export default {
 <style>
 body {
     text-align: center;
-    background-color: #f7cac9;
+    background-color: #fefbd8;
 }
 
 input {
