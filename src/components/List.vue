@@ -21,7 +21,9 @@ export default {
   },
   methods: {
     removeItem(Item, index) {
-      console.log(Item, index);
+      // console.log(Item, index);
+      localStorage.removeItem(Item);
+      this.Items.splice(index,1);
     }
   },
   created() {
