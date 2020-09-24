@@ -10,7 +10,7 @@ export default {
 
 <style>
 h1 {
-    color: #034f84;
+    color: #838383;
     font-weight: 900;
     margin: 2.5rem 0 1.5rem;
 }
