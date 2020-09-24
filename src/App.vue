@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Input></Input>
-    <List></List>
+    <Input v-on:addTodo="addTodo"></Input>
+    <List v-bind:propsdata="Items"></List>
     <Footer></Footer>
   </div>
 </template>
@@ -16,6 +16,16 @@ import Footer from './components/Footer';
 
 
 export default {
+  data() {
+    return {
+      Items: []
+    }
+  },
+  methods : {
+    addTodo() {
+      // 로컬 스토리지에 데이터를 추가하는 로직 
+    }
+  }
   components : {
     'Header' : Header,
     'Input' : Input,

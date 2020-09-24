@@ -14,11 +14,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      Items: []
-    }
-  },
+  props: ['propsdata'],
   methods: {
     removeItem(Item, index) {
       // console.log(Item, index);
