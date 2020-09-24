@@ -17,9 +17,10 @@ export default {
   props: ['propsdata'],
   methods: {
     removeItem(Item, index) {
-      // console.log(Item, index);
-      localStorage.removeItem(Item);
-      this.Items.splice(index,1);
+      this.$emit('removeTodo', Item, index);
+      // 이벤트를 발생시키고 app 컴포넌트로 전달, 
+      // 선택한 할 일의 텍스트 (Iten)과 인덱스(Index)를 같이 보냄
+      // 이벤트를 전달할 때 인자를 함께 전달할 수 있음 
     }
   }
 }

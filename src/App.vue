@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <Input v-on:addTodo="addTodo"></Input>
-    <List v-bind:propsdata="Items"></List>
+    <List v-bind:propsdata="Items" @removeTodo="removeTodo"></List>
     <Footer v-on:removeAll="clearAll"></Footer>
   </div>
 </template>
@@ -30,6 +30,10 @@ export default {
       // 로컬 스토리지에 데이터를 추가하는 로직 
       localStorage.setItem(Item, Item);
       this.Items.push(Item);
+    },
+    removeTodo(Item, index) {
+      localStorage.removeItem(Item);
+      this.Items.splice(index, 1);
     }
   },
   components : {
