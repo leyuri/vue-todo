@@ -21,13 +21,6 @@ export default {
       localStorage.removeItem(Item);
       this.Items.splice(index,1);
     }
-  },
-  created() {
-    if (localStorage.length > 0) {
-      for (var i = 0; i < localStorage.length; i++) {
-        this.Items.push(localStorage.key(i));
-      }
-    }
   }
 }
 </script>

@@ -33,6 +33,13 @@ export default {
     'Input' : Input,
     'List' : List,
     'Footer' : Footer,
+  },
+  created() {
+    if (localStorage.length > 0) {
+      for (var i = 0; i < localStorage.length; i++) {
+        this.Items.push(localStorage.key(i));
+      }
+    }
   }
 }
 </script>
