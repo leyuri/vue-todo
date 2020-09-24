@@ -3,7 +3,7 @@
     <Header></Header>
     <Input v-on:addTodo="addTodo"></Input>
     <List v-bind:propsdata="Items"></List>
-    <Footer></Footer>
+    <Footer v-on:removeAll="clearAll"></Footer>
   </div>
 </template>
 
@@ -22,6 +22,10 @@ export default {
     }
   },
   methods : {
+    clearAll() {
+      localStorage.clear();
+      this.Items = [];
+    },
     addTodo(Item) {
       // 로컬 스토리지에 데이터를 추가하는 로직 
       localStorage.setItem(Item, Item);
