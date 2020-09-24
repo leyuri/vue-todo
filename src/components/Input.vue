@@ -1,6 +1,7 @@
 <template>
   <div class="inputBox shadow">
-    <input type="text" v-model="newItem" placeholder="Type what you have to do" v-on:keypress.enter="addTodo">
+    <input type="text" v-model="newItem" placeholder="Type what you have to do" 
+    v-on:keypress.enter="addTodo">
     <span class="addContainer" v-on:click="addTodo">
       <i class="addBtn fas fa-plus" aria-hidden="true"></i>
     </span>
@@ -30,12 +31,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 input:focus {
   outline: none;
 }
 .inputBox {
-  background: #f6f6f6;
+  background: white;
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
@@ -46,7 +47,7 @@ input:focus {
 }
 .addContainer {
   float: right;
-  background:#ffc7c7;
+  background: #fccbcb;
   display: inline-block;
   width: 3rem;
   border-radius: 0 5px 5px 0;
