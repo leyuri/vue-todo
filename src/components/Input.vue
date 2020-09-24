@@ -19,7 +19,7 @@ export default {
         addTodo() {
             if (this.newItem !== "") { //input box의 입력값이 있을 때만 저장
                 var value = this.newItem && this.newItem.trim(); //앞뒤 공백 문자열 제거
-                localStorage.setItem(value, value);
+                this.$emit('addTodo', value);
                 this.clearInput();
             }
             

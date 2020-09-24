@@ -22,10 +22,12 @@ export default {
     }
   },
   methods : {
-    addTodo() {
+    addTodo(Item) {
       // 로컬 스토리지에 데이터를 추가하는 로직 
+      localStorage.setItem(Item, Item);
+      this.Items.push(Item);
     }
-  }
+  },
   components : {
     'Header' : Header,
     'Input' : Input,
