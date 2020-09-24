@@ -1,10 +1,10 @@
 <template>
   <section>
     <ul>
-      <li v-for="Item in Items" class="shadow">
+      <li v-for="(Item, index) in Items" :key="Item" class="shadow">
         <i class="checkBtn fas fa-check" aria-hidden="true"></i>
         {{ Item }}
-        <span class="removeBtn" type="button" @click="removeTodo(Item, index)">
+        <span class="removeBtn" type="button" @click="removeItem(Item, index)">
           <i class="far fa-trash-alt" aria-hidden="true"></i>
         </span>
       </li>
@@ -17,6 +17,11 @@ export default {
   data() {
     return {
       Items: []
+    }
+  },
+  methods: {
+    removeItem(Item, index) {
+      console.log(Item, index);
     }
   },
   created() {
